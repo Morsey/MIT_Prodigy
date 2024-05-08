@@ -1,1 +1,16 @@
-This file is to briefly log the procedure for making hootini
+This file is to briefly log the procedure for making hootini.
+
+
+1. Raspberry pi OS installed - bullseye used as VNC does not work properly with latest versions.
+2. Node-red installed via command:
+bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
+
+from: https://nodered.org/docs/getting-started/raspberrypi
+
+3. Node-red-dashboard added
+
+4. Install browswer: sudo apt-get install chromium-browser --yes
+
+5. 
+
+
