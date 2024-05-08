@@ -9,8 +9,13 @@ from: https://nodered.org/docs/getting-started/raspberrypi
 
 3. Node-red-dashboard added
 
-4. Install browswer: sudo apt-get install chromium-browser --yes
+Roughly following this guidance to make a headless kiosk. We don't care too much about security as it is unlikely someone will whip out a keyboard...
 
+4. Install browser: 
+
+sudo apt-get install chromium-browser --yes 
+
+this is a lightweight browser that works on a zero. "Chromium" is a different browser that doesn't work
 5. 
 
 
