@@ -1,0 +1,11 @@
+{
+    "name": "node-red-project",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "node-red-contrib-play-soundfile": "~0.0.7",
+        "node-red-contrib-uibuilder": "~6.8.2",
+        "node-red-dashboard": "~3.6.5"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "projects": {
+        "WizardsOfWyvern": {
+            "credentialSecret": false
+        },
+        "FakeWizard": {
+            "credentialSecret": false
+        }
+    },
+    "activeProject": "WizardsOfWyvern"
+}

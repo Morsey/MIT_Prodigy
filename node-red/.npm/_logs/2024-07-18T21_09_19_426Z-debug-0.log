@@ -1,0 +1,40 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.7.0
+2 info using node@v20.15.1
+3 silly config:load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config:load:file:/data/.npmrc
+5 silly config:load:file:/usr/src/node-red/.npmrc
+6 silly config:load:file:/usr/local/etc/npmrc
+7 verbose title npm install node-red-contrib-play-soundfile@0.0.7
+8 verbose argv "install" "--no-audit" "--no-update-notifier" "--no-fund" "--save" "--save-prefix" "~" "--omit" "dev" "--engine-strict" "node-red-contrib-play-soundfile@0.0.7"
+9 verbose logfile logs-max:10 dir:/data/.npm/_logs/2024-07-18T21_09_19_426Z-
+10 verbose logfile /data/.npm/_logs/2024-07-18T21_09_19_426Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly idealTree buildDeps
+13 silly fetch manifest node-red-contrib-play-soundfile@0.0.7
+14 http fetch GET 200 https://registry.npmjs.org/node-red-contrib-play-soundfile 672ms (cache miss)
+15 silly placeDep ROOT node-red-contrib-play-soundfile@0.0.7 OK for: node-red-project@0.0.1 want: 0.0.7
+16 silly fetch manifest play-sound@^1.1.3
+17 http fetch GET 200 https://registry.npmjs.org/play-sound 505ms (cache miss)
+18 silly placeDep ROOT play-sound@1.1.6 OK for: node-red-contrib-play-soundfile@0.0.7 want: ^1.1.3
+19 silly fetch manifest find-exec@1.0.3
+20 http fetch GET 200 https://registry.npmjs.org/find-exec 500ms (cache miss)
+21 silly placeDep ROOT find-exec@1.0.3 OK for: play-sound@1.1.6 want: 1.0.3
+22 silly fetch manifest shell-quote@^1.8.1
+23 http fetch GET 200 https://registry.npmjs.org/shell-quote 80ms (cache miss)
+24 silly placeDep ROOT shell-quote@1.8.1 OK for: find-exec@1.0.3 want: ^1.8.1
+25 silly reify moves {}
+26 silly tarball no local data for shell-quote@https://registry.npmjs.org/shell-quote/-/shell-quote-1.8.1.tgz. Extracting by manifest.
+27 silly tarball no local data for node-red-contrib-play-soundfile@https://registry.npmjs.org/node-red-contrib-play-soundfile/-/node-red-contrib-play-soundfile-0.0.7.tgz. Extracting by manifest.
+28 silly tarball no local data for play-sound@https://registry.npmjs.org/play-sound/-/play-sound-1.1.6.tgz. Extracting by manifest.
+29 silly tarball no local data for find-exec@https://registry.npmjs.org/find-exec/-/find-exec-1.0.3.tgz. Extracting by manifest.
+30 http fetch GET 200 https://registry.npmjs.org/shell-quote/-/shell-quote-1.8.1.tgz 83ms (cache miss)
+31 http fetch GET 200 https://registry.npmjs.org/play-sound/-/play-sound-1.1.6.tgz 138ms (cache miss)
+32 http fetch GET 200 https://registry.npmjs.org/find-exec/-/find-exec-1.0.3.tgz 145ms (cache miss)
+33 http fetch GET 200 https://registry.npmjs.org/node-red-contrib-play-soundfile/-/node-red-contrib-play-soundfile-0.0.7.tgz 846ms (cache miss)
+34 silly ADD node_modules/shell-quote
+35 silly ADD node_modules/find-exec
+36 silly ADD node_modules/play-sound
+37 silly ADD node_modules/node-red-contrib-play-soundfile
+38 verbose exit 0
+39 info ok
