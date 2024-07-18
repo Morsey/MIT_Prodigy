@@ -1,0 +1,5 @@
+{
+  "MQTT_CLIENT": "RedDragon",
+  "MQTT_TOPIC": "MI/PRODIGY/PUZZLE/RedDragon",
+  "MQTT_SERVER": "192.168.1.169"
+}

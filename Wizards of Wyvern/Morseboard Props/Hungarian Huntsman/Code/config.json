@@ -1,0 +1,5 @@
+{
+  "MQTT_CLIENT": "HungarianHuntsman",
+  "MQTT_TOPIC": "MI/PRODIGY/PUZZLE/HungarianHuntsman",
+  "MQTT_SERVER": "192.168.1.169"
+}

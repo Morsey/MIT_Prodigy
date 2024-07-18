@@ -1,0 +1,6 @@
+{
+  "spider_id": "4",
+  "hunt_colour": [0, 255, 255],
+  "dormant_colour": [0, 0, 0],
+  "dying_colour": [0,250,0]
+}
