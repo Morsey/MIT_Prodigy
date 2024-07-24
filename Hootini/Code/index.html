@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../uibuilder/images/node-blue.ico">
+    <title>Node-REDscape In-Game Display</title>
+    <meta name="description" content="Node-REDscape In-Game Display">
+
+    <!-- Your own CSS (defaults to loading uibuilders css)-->
+    <link type="text/css" rel="stylesheet" href="./index.css" media="all">
+    <!-- Include Webfont to style text in custom font -->
+    <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+    <!-- #region Supporting Scripts. These MUST be in the right order. Note no leading / -->
+    <script defer src="../uibuilder/uibuilder.iife.min.js"></script>
+    <script defer src="./index.js">
+        /* OPTIONAL: Put your custom code in that */
+    </script>
+    <!-- #endregion -->
+
+</head>
+
+<body class="uib">
+    <div id="app">
+        <audio id="audioID" ref="audioRef"></audio>
+        <div class="timerText">Time Remaining</div>
+        <div class="displayText"> - </div>
+    </div>
+</body>
+
+</html>

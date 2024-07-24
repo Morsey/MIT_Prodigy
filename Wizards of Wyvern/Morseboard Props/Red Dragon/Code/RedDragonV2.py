@@ -149,11 +149,6 @@ class Puzzle:
 puzzle = Puzzle(network, config["MQTT_TOPIC"])
 network.subscribe_to_topic(config["MQTT_TOPIC"], puzzle.process_message)
 
-while not network.check_mqtt_and_reconnect():
-    print("connecting to MQTT")
-    network.subscribe_to_topic(config["MQTT_TOPIC"], puzzle.process_message)
-    sleep(0.5)
-
 while True:
     try:
         network.check_for_messages()

@@ -1,0 +1,52 @@
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    /* Don't display any scroll bars */
+}
+
+.background,
+.backgroundVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -10;
+}
+
+.overlay,
+.overlayVideo {
+    position: fixed;
+    left: 200px;
+    top: 100px;
+    width: 1080px;
+    height: 480px;
+    z-index: 10;
+}
+
+#app {
+    position: fixed;
+    text-align: center;
+    margin: auto;
+    font-family: 'Staatliches', cursive;
+    color: #999;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.timerText {
+    position: fixed;
+    top: 100px;
+    left: 400px;
+    font-size: 100px;
+}
+
+.displayText {
+    position: fixed;
+    top: 200px;
+    left: 400px;
+    font-size: 100px;
+}

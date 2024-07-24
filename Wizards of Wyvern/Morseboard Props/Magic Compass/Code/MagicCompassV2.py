@@ -55,6 +55,8 @@ class Puzzle:
         
         self.pointing = False
         
+        self.animals = Animals()
+        
  
     def step(self):
         if ticks_ms() - self.heartbeat_timer > self.heartbeat_timeout:
@@ -75,6 +77,14 @@ class Puzzle:
             self.pointing = False
             
         self.update_LED()
+        
+        self.check_animals()
+        
+    def check_animals(self):
+        status = self.animals.check_pins()
+        if status != self.animals.last_status:
+            self.animals.last_status = status
+            network.send_mqtt_json(self.topic, {"animals": status})
     
                      
     def boot_up_indication(self):
@@ -252,16 +262,35 @@ class Compass:
                     wait = 0.2
 
         self.all_off()
+        
 
+class Animals:
+    
+    def __init__(self):
+        self.pin_numbers = [2,3,4,5,6]
+        self.pins = []
+        for p in self.pin_numbers:
+            self.pins.append(Pin(p, Pin.IN, Pin.PULL_UP))
+            
+        self.last_status ={}
+            
+        
+    def check_pins(self):
+        status = {}
+        for i in range(0, len(self.pins)):
+            status[i]= self.pins[i].value()
+        return status
 
 puzzle = Puzzle(network, config["MQTT_TOPIC"])
 network.subscribe_to_topic(config["MQTT_TOPIC"], puzzle.process_message)
 puzzle.boot_up_indication()
 
-
 while True:
-    
-    network.check_for_messages()
+    try:
+        network.check_for_messages()
+    except:
+        network.check_mqtt_and_reconnect()
+        
     puzzle.step()
     sleep(0.01)
     

@@ -1,12 +1,13 @@
 from time import sleep
 from machine import Pin
 
+sleep(1)
+        
+LED = Pin(25, Pin.OUT)
+        
 
-if True:  ## Easy bypass when debugging
+if False:  ## Easy bypass when debugging
     try:
-        
-        LED = Pin(25, Pin.OUT)
-        
         # Emergency connection buffer time
         emergency_timeout = 5
         for i in range(0,emergency_timeout):
@@ -17,7 +18,7 @@ if True:  ## Easy bypass when debugging
             print(f"Waiting for emergency connection {emergency_timeout - i}")
 
 
-        import HungarianHuntsmanV2
+        import MagicCompassV2
         
     except:
         
@@ -31,3 +32,4 @@ if True:  ## Easy bypass when debugging
 
             machine.reset()
     
+

@@ -6,6 +6,7 @@ from neopixel import NeoPixel
 from libs.miNetwork import MINetwork
 import random
 from libs.Stepper import Stepper
+from libs import webrepl
 
 
 # load config
@@ -22,6 +23,13 @@ uart.init(bits=8, parity=None, stop=2)
 
 if NETWORK:
     network = MINetwork()
+    
+    
+
+    # load webrepl
+    webrepl.start()
+
+    
     network.connect_to_network()
     network.connect_to_mqtt_broker(config["MQTT_CLIENT"], config["MQTT_SERVER"])
 else:
@@ -113,7 +121,7 @@ class EggMover:
 
         self.egg_sensor = Pin(26, Pin.IN, Pin.PULL_UP)
         
-        self.out_position = 1700
+        self.out_position = 1600
 
     def go_home(self):
         print("egg going home")
@@ -124,7 +132,7 @@ class EggMover:
             self.stepper.position = 0
             self.stepper.move_to(-40)
 
-        if (time.ticks_ms() - start_time) > 5000:
+        if (time.ticks_ms() - start_time) > 8000:
             print("EggMover: home not found - timing out", 1)
         self.stepper.position = 0
 
@@ -174,27 +182,30 @@ class Puzzle:
             print("not valid JSON")
             return
 
+
         if "spider action" in message_json:
             if message_json["spider action"] == "wake all":
                 self.wake_all_spiders()
             
-            if message_json["spider action"] == "sleep all":
+            elif message_json["spider action"] == "sleep all":
                 self.sleep_all_spiders()()
                 
-            if message_json["spider action"] == "kill all":
+            elif message_json["spider action"] == "kill all":
                 self.kill_all_spiders()()
+            else:
+                print(f"spider action not understood: {message_json}")
                 
         if "spider multi action" in message_json:
-            print(message_json["spider multi action"])
-            for _id, action in message_json["spider multi action"].items():
-                if action == "wake":
-                    self.wake_spider_id(_id)
-                if action == "sleep":
-                    self.sleep_spider_id(_id)
-                if action == "kill":
-                    self.kill_spider_id(_id)
+            cmds = message_json["spider multi action"]
+            
+            for cmd in cmds:
+                if cmd[1] == "wake":
+                    self.wake_spider_id(cmd[0])
+                if cmd[1] == "sleep":
+                    self.sleep_spider_id(cmd[0])
+                if cmd[1] == "kill":
+                    self.kill_spider_id(cmd[0])
                     
-
 
         if "egg position" in message_json:
             if message_json["egg position"] == "go home":
@@ -230,6 +241,8 @@ class Puzzle:
             self.indicator_led.toggle()
             self.indicator_timer = ticks_ms()
             
+        self.check_to_send_statuses()
+            
     
     def startup_indicator(self):
         for i in range(0,3):
@@ -241,9 +254,8 @@ class Puzzle:
             
     def initialise_egg(self):
         self.egg_mover.go_home()
+        self.egg_mover.go_out()
     
-    
-        
     
     def initialise_spiders(self, ids):
         #  initialise spiders
@@ -270,19 +282,23 @@ class Puzzle:
 
     
     def sleep_all_spiders(self):
+        print("sleeping all spiders")
         for _id in self.spiders:
             self.sleep_spider_id(_id)
             
     def wake_all_spiders(self):
+        print("waking all spiders")
         for _id in self.spiders:
             self.wake_spider_id(_id)
                
     def kill_all_spiders(self):
+        print("killing all spiders")
         for _id in self.spiders:
             self.kill_spider_id(_id)
             
     def wake_spider_id(self, _id):
-        if _id in self.spiders:
+        if _id in self.spiders: 
+            print(f"Waking spiker {_id}")
             self.spiders[_id].wake_up()
             
     def kill_spider_id(self, _id):
@@ -298,14 +314,20 @@ class Puzzle:
         statuses = {}
         for _id in self.spiders:
             statuses[_id] = self.get_spider_status(_id)
-        print(statuses)
-            
+        return statuses
     
     def get_spider_status(self, _id):
         if _id in self.spiders:
             return self.spiders[_id].update_status()
         return
-        
+    
+    def check_to_send_statuses(self):
+        new_status = self.get_all_spiders_statuses()
+        if new_status != self.status:
+            self.status = new_status
+            print(self.status)
+
+
   
 
 puzzle = Puzzle(network, config["MQTT_TOPIC"])
@@ -314,15 +336,23 @@ if NETWORK:
 
 
 puzzle.initialise_spiders([1, 2, 3, 4])
+while False:
+    network.check_for_messages()
+    puzzle.step()
+    sleep(0.01)
 
+
+
+# for use in final when need to check for dropped network
 while True:
     if NETWORK:
         try:
             network.check_for_messages()
         except:
+            print("error checking mqtt - this could be from within the functions")
             network.check_mqtt_and_reconnect()
             
     puzzle.step()
-    sleep(0.1)
+    sleep(0.01)
     
 
