@@ -42,8 +42,9 @@ class Puzzle:
         self.UV_Pin = Pin(15, Pin.OUT) # 5V out pin
         self.current_uv_status = None
         
+        self.number_leds = 100
         
-        self.np = NeoPixel(Pin(2), 100, bpp=4)
+        self.np = NeoPixel(Pin(2), self.number_leds, bpp=4)
         self.mag_switch = Pin(3, Pin.IN, Pin.PULL_UP)
         
         self.led_grid = [
@@ -99,6 +100,64 @@ class Puzzle:
             self.random_nine()
             
  
+    def rainbow_pulse(self, length):
+        def wheel(pos):
+            """Generate rainbow colors across 0-255 positions."""
+            if pos < 85:
+                return Color(pos * 3, 255 - pos * 3, 0)
+            elif pos < 170:
+                pos -= 85
+                return Color(255 - pos * 3, 0, pos * 3)
+            else:
+                pos -= 170
+                return Color(0, pos * 3, 255 - pos * 3)
+ 
+        """Send a rainbow pulse up the chain of LEDs."""
+        pulse_length=15
+        wait_ms=50
+        for i in range(self.number_leds + pulse_length):
+            for j in range(self.number_leds):
+                if i - pulse_length <= j < i:
+                    self.np[j] = wheel((j * 256 // pulse_length) & 255)
+                else:
+                    self.np[j] = (0, 0, 0)
+                    
+            self.np.show()
+            time.sleep(wait_ms / 1000.0)
+ 
+    def random_pulse(self, length):
+        def pick_random_consecutive_sequence(arr, X):
+
+            Y = len(arr)
+
+            if X > Y:
+                raise ValueError("X cannot be greater than the length of the array.")
+
+            start_index = random.randint(0, Y - X)
+            return arr[start_index:start_index + X]
+        
+        def led_action(leds, status):
+            
+            for n in range(0,100):
+                self.np[n] = (0, 0, 0, 0)
+            for n in leds:
+                if status is "on" or status is 1:
+                    self.np[n] = (0, 0, 0, 255)
+               
+                    
+            self.np.write()
+            
+        
+        led_picks = pick_random_consecutive_sequence(list(range(0,self.number_leds)),length)
+         
+        flash = [[50, 1],[100, 0], [100, 1], [200, 0], [75, 1], [150, 0]]
+        
+        
+        for timing in flash:
+            
+            led_action(led_picks, timing[1])
+                
+            sleep(timing[0] / 1000.0)
     def random_nine(self):
         
         def led_action(leds, status):
@@ -151,6 +210,9 @@ class Puzzle:
         if "lightening" in message_json:
             self.lightening(message_json["lightening"])
             
+        if "random_pulse" in message_json:
+            self.random_pulse(message_json["random_pulse"])
+            
         if "maglock" in message_json:
             self.maglock(message_json["maglock"])
             
@@ -183,7 +245,7 @@ class Puzzle:
 puzzle = Puzzle(network, config["MQTT_TOPIC"])
 network.subscribe_to_topic(config["MQTT_TOPIC"], puzzle.process_message)
 
-while True:
+while False:
     
     sleep(0.1)
     network.check_mqtt_and_reconnect()

@@ -46,6 +46,10 @@ class Puzzle:
         self.locations = self.setup_pins()
         self.last_locations_on = None
         
+        
+        self.relay_pin = Pin(22, Pin.OUT)
+        self.relay_pin.off()
+        
     def setup_pins(self):
         
         across = [7, 10, 11, 12, 13]
@@ -107,7 +111,22 @@ class Puzzle:
             print("not valid JSON")
             return
         print(message_json)
+        
+        if "bookcase" in message_json:
+            if message_json["bookcase"] == "open":
+                self.maglock("off")
+            if message_json["bookcase"] == "lock":
+                self.maglock("on")
                  
+                 
+    def maglock(self, status):
+        if status == "on":
+            print("relay on")
+            self.relay_pin.on()
+        else:
+            print("relay off")
+            self.relay_pin.off()
+        
                  
     def check_locations(self):
         
