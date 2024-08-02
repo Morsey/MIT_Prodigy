@@ -792,5 +792,76 @@
                 "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-play-soundfile/play-soundfile.js"
             }
         }
+    },
+    "node-red-contrib-spreadsheet-in": {
+        "name": "node-red-contrib-spreadsheet-in",
+        "version": "0.7.2",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "book": {
+                "name": "book",
+                "types": [
+                    "book"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-spreadsheet-in",
+                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-spreadsheet-in/book.js"
+            },
+            "sheet": {
+                "name": "sheet",
+                "types": [
+                    "sheet"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-spreadsheet-in",
+                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-spreadsheet-in/sheet.js"
+            },
+            "cell": {
+                "name": "cell",
+                "types": [
+                    "cell"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-spreadsheet-in",
+                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-spreadsheet-in/cell.js"
+            },
+            "sheet-to-json": {
+                "name": "sheet-to-json",
+                "types": [
+                    "sheet-to-json"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-spreadsheet-in",
+                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-spreadsheet-in/sheet-to-json.js"
+            }
+        }
+    },
+    "node-red-node-random": {
+        "name": "node-red-node-random",
+        "version": "0.4.1",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "random": {
+                "name": "random",
+                "types": [
+                    "random"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-node-random",
+                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-node-random/random.js"
+            }
+        }
     }
 }

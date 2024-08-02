@@ -5,7 +5,9 @@
     "private": true,
     "dependencies": {
         "node-red-contrib-play-soundfile": "~0.0.7",
+        "node-red-contrib-spreadsheet-in": "~0.7.2",
         "node-red-contrib-uibuilder": "~6.8.2",
-        "node-red-dashboard": "~3.6.5"
+        "node-red-dashboard": "~3.6.5",
+        "node-red-node-random": "~0.4.1"
     }
 }
