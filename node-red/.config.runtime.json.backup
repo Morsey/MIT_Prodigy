@@ -1,3 +1,5 @@
 {
-    "instanceId": "3fefdb2247f6d961"
+    "instanceId": "3fefdb2247f6d961",
+    "_credentialSecret": "55b3c6a68512ff097b0220c1ba50c656e82dc1d2ed6333178163ab36d375cb3c",
+    "runtimeFlowState": "stop"
 }

@@ -29,6 +29,9 @@
         "debug": {
             "filter": "filterAll",
             "filteredNodes": []
-        }
+        },
+        "menu-menu-item-palette": true,
+        "menu-deploymenu-item-node": true,
+        "menu-deploymenu-item-full": false
     }
 }

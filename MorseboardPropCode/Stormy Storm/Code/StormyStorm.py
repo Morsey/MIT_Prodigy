@@ -46,6 +46,10 @@ class Puzzle:
         
         self.np = NeoPixel(Pin(2), self.number_leds, bpp=4)
         self.mag_switch = Pin(3, Pin.IN, Pin.PULL_UP)
+        self.hootini_switch = Pin(4, Pin.OUT)
+        self.hootini_switch.off()
+        
+        self.maglock_on = False
         
         self.led_grid = [
             [1 , 2,  3,  4,  5,  6,  7,  8,  9,  10],
@@ -61,10 +65,11 @@ class Puzzle:
             ]
         
         self.rainbow_on = False
+        self.UV_enabled = False
         
     def step(self):
         if ticks_ms() - self.heartbeat_timer > self.heartbeat_timeout:
-            network.send_mqtt_json(self.topic, {"heartbeat" : "alive"})
+            network.send_mqtt_json(self.topic, {"heartbeat" : network.nic.ifconfig()[0]})
             self.heartbeat_timer = ticks_ms()
             
         if ticks_ms() - self.indicator_timer > self.indicator_timeout:
@@ -231,6 +236,9 @@ class Puzzle:
         except ValueError:
             print("not valid JSON")
             return
+        
+        if "enable_uv" in message_json:
+            self.UV_enabled = message_json["enable_uv"]
 
         if "uv" in message_json:
             self.uv_light_status(message_json["uv"])
@@ -247,14 +255,31 @@ class Puzzle:
         if "rainbow" in message_json:
             self.rainbow_pulse(message_json["rainbow"])
             
+        
+        if "open_hootini" in message_json:
+            # if maglock is off, pulse on in order to give power
+            if not self.maglock_on:
+                self.relay_pin.on()
+                
+            self.hootini_switch.on()
+            sleep(0.2)
+            self.hootini_switch.off()
+            
+            # switch maglock off again if needed
+            if not self.maglock_on:
+                self.relay_pin.off()
+        
+            
             
     def maglock(self, status):
         if status == "on":
             print("relay on")
             self.relay_pin.on()
+            self.maglock_on = True
         else:
             print("relay off")
             self.relay_pin.off()
+            self.maglock_on = False
     
     def check_mag_switch(self):
         
@@ -267,8 +292,9 @@ class Puzzle:
                 self.current_uv_status = initial_value
                 
                 if initial_value == 0:
-                    self.uv_light_status("on")
-                    network.send_mqtt_json(self.topic, {"uv_status" : "on"})
+                    if self.UV_enabled:
+                        self.uv_light_status("on")
+                        network.send_mqtt_json(self.topic, {"uv_status" : "on"})
                 else:
                     self.uv_light_status("off")
                     network.send_mqtt_json(self.topic, {"uv_status" : "off"})

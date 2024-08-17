@@ -50,6 +50,16 @@ class Puzzle:
         self.relay_pin = Pin(22, Pin.OUT)
         self.relay_pin.off()
         
+        
+        self.latch_lock_one = Pin(0, Pin.OUT)
+        self.latch_lock_two = Pin(1, Pin.OUT)
+        
+        self.dragon_switch = Pin(8, Pin.OUT)
+        
+        self.latch_lock_one.off()
+        self.latch_lock_two.off()
+        self.dragon_switch.off()
+        
     def setup_pins(self):
         
         across = [7, 10, 11, 12, 13]
@@ -117,7 +127,26 @@ class Puzzle:
                 self.maglock("off")
             if message_json["bookcase"] == "lock":
                 self.maglock("on")
+                
+        if "latch_one" in message_json:
+            if message_json["latch_one"] == "open":
+                self.latch_lock_one.on()
+                sleep(0.1)
+                self.latch_lock_one.off()
                  
+                
+        if "latch_two" in message_json:
+            if message_json["latch_two"] == "open":
+                self.latch_lock_two.on()
+                sleep(0.1)
+                self.latch_lock_two.off()
+                
+        
+        if "dragon" in message_json:
+            if message_json["dragon"] == "on":
+                self.dragon_switch.on()
+            if message_json["dragon"] == "off":
+                self.dragon_switch.off()
                  
     def maglock(self, status):
         if status == "on":

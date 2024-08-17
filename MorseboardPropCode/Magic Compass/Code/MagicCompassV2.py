@@ -226,7 +226,7 @@ class Compass:
         
         WEST_PIN = 14 #w
         EAST_PIN = 11
-        SOUTH_PIN = 13 # soutn
+        SOUTH_PIN = 13# # soutn
         NORTH_PIN = 12 #north
 
         self.n = Pin(NORTH_PIN, Pin.OUT)

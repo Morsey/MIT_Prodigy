@@ -1,0 +1,5 @@
+{
+  "MQTT_CLIENT": "StormyStorm",
+  "MQTT_TOPIC": "MI/PRODIGY/PUZZLE/FiveRunes",
+  "MQTT_SERVER": "192.168.1.169"
+}

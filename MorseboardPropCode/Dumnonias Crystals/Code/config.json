@@ -1,0 +1,5 @@
+{
+  "MQTT_CLIENT": "DumnoniasCrystal",
+  "MQTT_TOPIC": "MI/PRODIGY/PUZZLE/DumnoniasCrystal",
+  "MQTT_SERVER": "192.168.1.169"
+}

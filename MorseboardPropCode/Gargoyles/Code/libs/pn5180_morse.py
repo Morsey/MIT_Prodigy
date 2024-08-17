@@ -129,7 +129,7 @@ class NFC:
         log(f"Initialised NFC:{card_reader_id} with nss={nss_pin}, rst={rst_pin}, bsy={bsy_pin}")
 
         # start SPI
-        self._spi = SPI(0, baudrate=1000000, sck=Pin(sck), mosi=Pin(mosi), miso=Pin(miso))
+        self._spi = SPI(1, baudrate=1000000, sck=Pin(sck), mosi=Pin(mosi), miso=Pin(miso))
         log(f"Initialised SPI with sck={sck}, mosi={mosi}, miso={miso}")
 
         self._timeout = 50  # set timeout to 200 ms

@@ -517,5 +517,5 @@ print(f"eeprom version: {nfc.get_eeprom_version()}")
 
 
 while True:
-    sleep(0.0)
+    sleep(0.1)
     print(nfc.read_card_serial())

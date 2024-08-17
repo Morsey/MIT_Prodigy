@@ -1,0 +1,5 @@
+{
+  "MQTT_CLIENT": "DragonSmoke",
+  "MQTT_TOPIC": "MI/PRODIGY/PUZZLE/DragonSmoke",
+  "MQTT_SERVER": "192.168.1.169"
+}

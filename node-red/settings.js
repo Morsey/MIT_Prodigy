@@ -230,6 +230,7 @@ module.exports = {
      * to move httpAdminRoot
      */
     //httpStatic: '/home/nol/node-red-static/', //single static source
+    httpStatic: '/Users/robmorse/Documents/GitHub/MIT_Prodigy/PropResouces',
     /**
      *  OR multiple static sources can be created using an array of objects...
      *  Each object can also contain an options object for further configuration.
@@ -307,9 +308,9 @@ module.exports = {
      */
     runtimeState: {
         /** enable or disable flows/state endpoint. Must be set to `false` to disable */
-        enabled: false,
+        enabled: true,
         /** show or hide runtime stop/start options in the node-red editor. Must be set to `false` to hide */
-        ui: false,
+        ui: true,
     },
     /** Configure the logging output */
     logging: {
@@ -510,7 +511,7 @@ module.exports = {
      *    global.get("os")
      */
     functionGlobalContext: {
-        // os:require('os'),
+        os:require('os'),
     },
 
     /** The maximum number of messages nodes will buffer internally as part of their
