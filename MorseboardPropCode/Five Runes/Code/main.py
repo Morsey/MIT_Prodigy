@@ -17,7 +17,7 @@ if False:  ## Easy bypass when debugging
             print(f"Waiting for emergency connection {emergency_timeout - i}")
 
 
-        import FiveRunes
+        import FiveRunesV2
         
     except:
         

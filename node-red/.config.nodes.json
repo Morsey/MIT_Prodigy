@@ -442,7 +442,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-contrib-uibuilder",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-uibuilder/nodes/uibuilder.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-uibuilder/nodes/uibuilder.js"
             },
             "uib-cache": {
                 "name": "uib-cache",
@@ -453,7 +453,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-contrib-uibuilder",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-uibuilder/nodes/uib-cache.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-uibuilder/nodes/uib-cache.js"
             },
             "uib-tag": {
                 "name": "uib-tag",
@@ -464,7 +464,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-contrib-uibuilder",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-uibuilder/nodes/uib-tag/customNode.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-uibuilder/nodes/uib-tag/customNode.js"
             },
             "uib-element": {
                 "name": "uib-element",
@@ -475,7 +475,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-contrib-uibuilder",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-uibuilder/nodes/uib-element/customNode.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-uibuilder/nodes/uib-element/customNode.js"
             },
             "uib-update": {
                 "name": "uib-update",
@@ -486,7 +486,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-contrib-uibuilder",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-uibuilder/nodes/uib-update/customNode.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-uibuilder/nodes/uib-update/customNode.js"
             },
             "uib-html": {
                 "name": "uib-html",
@@ -497,7 +497,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-contrib-uibuilder",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-uibuilder/nodes/uib-html/customNode.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-uibuilder/nodes/uib-html/customNode.js"
             },
             "uib-save": {
                 "name": "uib-save",
@@ -508,7 +508,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-contrib-uibuilder",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-uibuilder/nodes/uib-save/customNode.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-uibuilder/nodes/uib-save/customNode.js"
             },
             "uib-sender": {
                 "name": "uib-sender",
@@ -519,7 +519,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-contrib-uibuilder",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-uibuilder/nodes/uib-sender.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-uibuilder/nodes/uib-sender.js"
             },
             "uib-list": {
                 "name": "uib-list",
@@ -530,7 +530,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-contrib-uibuilder",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-uibuilder/nodes/uib-list/customNode.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-uibuilder/nodes/uib-list/customNode.js"
             }
         }
     },
@@ -549,7 +549,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_base.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_base.js"
             },
             "ui_button": {
                 "name": "ui_button",
@@ -560,7 +560,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_button.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_button.js"
             },
             "ui_dropdown": {
                 "name": "ui_dropdown",
@@ -571,7 +571,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_dropdown.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_dropdown.js"
             },
             "ui_switch": {
                 "name": "ui_switch",
@@ -582,7 +582,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_switch.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_switch.js"
             },
             "ui_slider": {
                 "name": "ui_slider",
@@ -593,7 +593,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_slider.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_slider.js"
             },
             "ui_numeric": {
                 "name": "ui_numeric",
@@ -604,7 +604,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_numeric.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_numeric.js"
             },
             "ui_text_input": {
                 "name": "ui_text_input",
@@ -615,7 +615,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_text_input.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_text_input.js"
             },
             "ui_date_picker": {
                 "name": "ui_date_picker",
@@ -626,7 +626,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_date_picker.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_date_picker.js"
             },
             "ui_colour_picker": {
                 "name": "ui_colour_picker",
@@ -637,7 +637,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_colour_picker.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_colour_picker.js"
             },
             "ui_form": {
                 "name": "ui_form",
@@ -648,7 +648,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_form.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_form.js"
             },
             "ui_text": {
                 "name": "ui_text",
@@ -659,7 +659,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_text.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_text.js"
             },
             "ui_gauge": {
                 "name": "ui_gauge",
@@ -670,7 +670,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_gauge.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_gauge.js"
             },
             "ui_chart": {
                 "name": "ui_chart",
@@ -681,7 +681,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_chart.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_chart.js"
             },
             "ui_audio": {
                 "name": "ui_audio",
@@ -692,7 +692,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_audio.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_audio.js"
             },
             "ui_toast": {
                 "name": "ui_toast",
@@ -703,7 +703,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_toast.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_toast.js"
             },
             "ui_ui_control": {
                 "name": "ui_ui_control",
@@ -714,7 +714,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_ui_control.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_ui_control.js"
             },
             "ui_template": {
                 "name": "ui_template",
@@ -725,7 +725,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_template.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_template.js"
             },
             "ui_link": {
                 "name": "ui_link",
@@ -736,7 +736,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_link.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_link.js"
             },
             "ui_tab": {
                 "name": "ui_tab",
@@ -747,7 +747,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_tab.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_tab.js"
             },
             "ui_group": {
                 "name": "ui_group",
@@ -758,7 +758,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_group.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_group.js"
             },
             "ui_spacer": {
                 "name": "ui_spacer",
@@ -769,7 +769,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-dashboard",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_spacer.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-dashboard/nodes/ui_spacer.js"
             }
         }
     },
@@ -789,7 +789,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-contrib-play-soundfile",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-play-soundfile/play-soundfile.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-play-soundfile/play-soundfile.js"
             }
         }
     },
@@ -808,7 +808,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-contrib-spreadsheet-in",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-spreadsheet-in/book.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-spreadsheet-in/book.js"
             },
             "sheet": {
                 "name": "sheet",
@@ -819,7 +819,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-contrib-spreadsheet-in",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-spreadsheet-in/sheet.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-spreadsheet-in/sheet.js"
             },
             "cell": {
                 "name": "cell",
@@ -830,7 +830,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-contrib-spreadsheet-in",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-spreadsheet-in/cell.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-spreadsheet-in/cell.js"
             },
             "sheet-to-json": {
                 "name": "sheet-to-json",
@@ -841,7 +841,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-contrib-spreadsheet-in",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-spreadsheet-in/sheet-to-json.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-spreadsheet-in/sheet-to-json.js"
             }
         }
     },
@@ -860,7 +860,287 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-node-random",
-                "file": "/Users/robmorse/Documents/GitHub/MIT_Prodigy/node-red/node_modules/node-red-node-random/random.js"
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-node-random/random.js"
+            }
+        }
+    },
+    "node-red-contrib-play-sound": {
+        "name": "node-red-contrib-play-sound",
+        "version": "0.2.0",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "play-sound": {
+                "name": "play-sound",
+                "types": [
+                    "PlaySound"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-play-sound",
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/node-red-contrib-play-sound/node-red-contrib-play-sound.js"
+            }
+        }
+    },
+    "@flowfuse/node-red-dashboard": {
+        "name": "@flowfuse/node-red-dashboard",
+        "version": "1.14.0",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "ui-base": {
+                "name": "ui-base",
+                "types": [
+                    "ui-base"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flowfuse/node-red-dashboard",
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/@flowfuse/node-red-dashboard/nodes/config/ui_base.js"
+            },
+            "ui-page": {
+                "name": "ui-page",
+                "types": [
+                    "ui-page"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flowfuse/node-red-dashboard",
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/@flowfuse/node-red-dashboard/nodes/config/ui_page.js"
+            },
+            "ui-link": {
+                "name": "ui-link",
+                "types": [
+                    "ui-link"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flowfuse/node-red-dashboard",
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/@flowfuse/node-red-dashboard/nodes/config/ui_link.js"
+            },
+            "ui-group": {
+                "name": "ui-group",
+                "types": [
+                    "ui-group"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flowfuse/node-red-dashboard",
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/@flowfuse/node-red-dashboard/nodes/config/ui_group.js"
+            },
+            "ui-theme": {
+                "name": "ui-theme",
+                "types": [
+                    "ui-theme"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flowfuse/node-red-dashboard",
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/@flowfuse/node-red-dashboard/nodes/config/ui_theme.js"
+            },
+            "ui-form": {
+                "name": "ui-form",
+                "types": [
+                    "ui-form"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flowfuse/node-red-dashboard",
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/@flowfuse/node-red-dashboard/nodes/widgets/ui_form.js"
+            },
+            "ui-text-input": {
+                "name": "ui-text-input",
+                "types": [
+                    "ui-text-input"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flowfuse/node-red-dashboard",
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/@flowfuse/node-red-dashboard/nodes/widgets/ui_text_input.js"
+            },
+            "ui-file-input": {
+                "name": "ui-file-input",
+                "types": [
+                    "ui-file-input"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flowfuse/node-red-dashboard",
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/@flowfuse/node-red-dashboard/nodes/widgets/ui_file_input.js"
+            },
+            "ui-button": {
+                "name": "ui-button",
+                "types": [
+                    "ui-button"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flowfuse/node-red-dashboard",
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/@flowfuse/node-red-dashboard/nodes/widgets/ui_button.js"
+            },
+            "ui-button-group": {
+                "name": "ui-button-group",
+                "types": [
+                    "ui-button-group"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flowfuse/node-red-dashboard",
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/@flowfuse/node-red-dashboard/nodes/widgets/ui_button_group.js"
+            },
+            "ui-dropdown": {
+                "name": "ui-dropdown",
+                "types": [
+                    "ui-dropdown"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flowfuse/node-red-dashboard",
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/@flowfuse/node-red-dashboard/nodes/widgets/ui_dropdown.js"
+            },
+            "ui-radio-group": {
+                "name": "ui-radio-group",
+                "types": [
+                    "ui-radio-group"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flowfuse/node-red-dashboard",
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/@flowfuse/node-red-dashboard/nodes/widgets/ui_radio_group.js"
+            },
+            "ui-slider": {
+                "name": "ui-slider",
+                "types": [
+                    "ui-slider"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flowfuse/node-red-dashboard",
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/@flowfuse/node-red-dashboard/nodes/widgets/ui_slider.js"
+            },
+            "ui-switch": {
+                "name": "ui-switch",
+                "types": [
+                    "ui-switch"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flowfuse/node-red-dashboard",
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/@flowfuse/node-red-dashboard/nodes/widgets/ui_switch.js"
+            },
+            "ui-text": {
+                "name": "ui-text",
+                "types": [
+                    "ui-text"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flowfuse/node-red-dashboard",
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/@flowfuse/node-red-dashboard/nodes/widgets/ui_text.js"
+            },
+            "ui-table": {
+                "name": "ui-table",
+                "types": [
+                    "ui-table"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flowfuse/node-red-dashboard",
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/@flowfuse/node-red-dashboard/nodes/widgets/ui_table.js"
+            },
+            "ui-chart": {
+                "name": "ui-chart",
+                "types": [
+                    "ui-chart"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flowfuse/node-red-dashboard",
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/@flowfuse/node-red-dashboard/nodes/widgets/ui_chart.js"
+            },
+            "ui-gauge": {
+                "name": "ui-gauge",
+                "types": [
+                    "ui-gauge"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flowfuse/node-red-dashboard",
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/@flowfuse/node-red-dashboard/nodes/widgets/ui_gauge.js"
+            },
+            "ui-notification": {
+                "name": "ui-notification",
+                "types": [
+                    "ui-notification"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flowfuse/node-red-dashboard",
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/@flowfuse/node-red-dashboard/nodes/widgets/ui_notification.js"
+            },
+            "ui-markdown": {
+                "name": "ui-markdown",
+                "types": [
+                    "ui-markdown"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flowfuse/node-red-dashboard",
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/@flowfuse/node-red-dashboard/nodes/widgets/ui_markdown.js"
+            },
+            "ui-template": {
+                "name": "ui-template",
+                "types": [
+                    "ui-template"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flowfuse/node-red-dashboard",
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/@flowfuse/node-red-dashboard/nodes/widgets/ui_template.js"
+            },
+            "ui-event": {
+                "name": "ui-event",
+                "types": [
+                    "ui-event"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flowfuse/node-red-dashboard",
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/@flowfuse/node-red-dashboard/nodes/widgets/ui_event.js"
+            },
+            "ui-control": {
+                "name": "ui-control",
+                "types": [
+                    "ui-control"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flowfuse/node-red-dashboard",
+                "file": "/Users/robmorse/GitHub/MIT_Prodigy/node-red/node_modules/@flowfuse/node-red-dashboard/nodes/widgets/ui_control.js"
             }
         }
     }

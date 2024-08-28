@@ -60,7 +60,7 @@ class Puzzle:
  
     def step(self):
         if ticks_ms() - self.heartbeat_timer > self.heartbeat_timeout:
-            network.send_mqtt_json(self.topic, {"heartbeat" : "alive"})
+            network.send_mqtt_json(self.topic, {"heartbeat" : network.nic.ifconfig()[0]})
             self.heartbeat_timer = ticks_ms()
             
         if ticks_ms() - self.indicator_timer > self.indicator_timeout:
@@ -294,3 +294,4 @@ while True:
     puzzle.step()
     sleep(0.01)
     
+

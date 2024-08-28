@@ -504,7 +504,7 @@ class NFC:
 nss_pins_numbers =  [4, 5, 13, 27, 28]
 rst_pins_numbers =  [3, 6, 14, 8,  9]
 busy_pins_numbers = [2, 7, 22, 15, 26]
-card_index = 4
+card_index = 0
 nfc = NFC(nss_pins_numbers[card_index], rst_pins_numbers[card_index], busy_pins_numbers[card_index], card_reader_id=card_index, sck=10, mosi=11, miso=12)
 nfc.begin()
 nfc.reset()

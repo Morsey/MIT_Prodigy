@@ -5,7 +5,10 @@
         },
         "FakeWizard": {
             "credentialSecret": false
+        },
+        "GUItest": {
+            "credentialSecret": false
         }
     },
-    "activeProject": "WizardsOfWyvern"
+    "activeProject": "GUItest"
 }

@@ -4,6 +4,8 @@
     "version": "0.0.1",
     "private": true,
     "dependencies": {
+        "@flowfuse/node-red-dashboard": "~1.14.0",
+        "node-red-contrib-play-sound": "~0.2.0",
         "node-red-contrib-play-soundfile": "~0.0.7",
         "node-red-contrib-spreadsheet-in": "~0.7.2",
         "node-red-contrib-uibuilder": "~6.8.2",

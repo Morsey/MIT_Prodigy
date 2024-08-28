@@ -14,7 +14,7 @@ import random
 with open("config.json") as f:
     config = json.load(f)
 
-NETWORK = False
+NETWORK = True
 if NETWORK:
     network = MINetwork()
         
@@ -89,7 +89,7 @@ class Puzzle:
         
         self.last_status = None
         
-        self.mode = "LEDS"
+        self.mode = "RFID"
         self.leds = NeoPixel(Pin(1), 4)
         
         self.led_brightness = 0
@@ -164,7 +164,7 @@ class Puzzle:
             
         for pulse in sequence:
             colour = pulse["colour"]
-            led_no = pulse["led_no"]
+            led_no = 3 - pulse["led_no"]
             speed = pulse["speed"]
             brightness = 0
             led_brightness = brightness

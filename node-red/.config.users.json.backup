@@ -15,6 +15,15 @@
             },
             "tours": {
                 "welcome": "4.0.2"
+            },
+            "dialog": {
+                "export": {
+                    "pretty": true,
+                    "json-view": true
+                }
+            },
+            "context": {
+                "flowRefresh": true
             }
         },
         "git": {
