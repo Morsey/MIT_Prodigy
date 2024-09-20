@@ -8,6 +8,15 @@ from neopixel import NeoPixel
 import sys
 import machine
 import math
+import gc
+
+
+# Function to print memory status
+def print_memory_status():
+    gc.collect()  # Trigger garbage collection
+    free_mem = gc.mem_free()  # Get available free memory
+    allocated_mem = gc.mem_alloc()  # Get allocated memory
+    print(f"Free memory: {free_mem}, Allocated memory: {allocated_mem}")
 
 
 LED = Pin(25, Pin.OUT)
@@ -44,6 +53,24 @@ def button_pressed(pin, pressed, duration_ms, btn_id):
     if pressed:
         puzzle.button_pressed(btn_id)
     
+class Buttons:
+    
+    def __init__(self):
+        self.pin_numbers = [3,4,5,6]
+        self.pins = []
+        for p in self.pin_numbers:
+            self.pins.append(Pin(p, Pin.IN, Pin.PULL_UP))
+            
+        self.last_status ={1:1, 2:1, 3:1, 0:1}
+            
+        
+    def check_buttons(self):
+        status = {}
+        for i in range(0, len(self.pins)):
+            status[i]= self.pins[i].value()
+        return status
+
+
 class Puzzle:
    
     
@@ -78,11 +105,14 @@ class Puzzle:
                                 "enabled": False,
                                 "level":0}
 
-        self.buttons = [None, None, None, None]
-        self.buttons[0] = DebouncedInput(3, button_pressed, pin_pull=Pin.PULL_UP, button_id=0, debounce_ms=50,pin_logic_pressed=False)
-        self.buttons[1] = DebouncedInput(4, button_pressed, pin_pull=Pin.PULL_UP, button_id=1, debounce_ms=50,pin_logic_pressed=False)
-        self.buttons[2] = DebouncedInput(5, button_pressed, pin_pull=Pin.PULL_UP, button_id=2, debounce_ms=50,pin_logic_pressed=False)
-        self.buttons[3] = DebouncedInput(6, button_pressed, pin_pull=Pin.PULL_UP, button_id=3, debounce_ms=50,pin_logic_pressed=False)
+        #self.buttons = [None, None, None, None]
+        #self.buttons[0] = DebouncedInput(3, button_pressed, pin_pull=Pin.PULL_UP, button_id=0, debounce_ms=50,pin_logic_pressed=False)
+        #self.buttons[1] = DebouncedInput(4, button_pressed, pin_pull=Pin.PULL_UP, button_id=1, debounce_ms=50,pin_logic_pressed=False)
+        #self.buttons[2] = DebouncedInput(5, button_pressed, pin_pull=Pin.PULL_UP, button_id=2, debounce_ms=50,pin_logic_pressed=False)
+        #self.buttons[3] = DebouncedInput(6, button_pressed, pin_pull=Pin.PULL_UP, button_id=3, debounce_ms=50,pin_logic_pressed=False)
+        
+        
+        self.buttons = Buttons()
         
         self.touchingSymbolsPin = Pin(10, Pin.IN, Pin.PULL_UP)
         self.touchingSymbolState = False
@@ -91,6 +121,7 @@ class Puzzle:
         self.room_leds = NeoPixel(Pin(11),100)
         self.room_leds_mode = "rainbow"
 
+        self.count = 0
 
         self.room_colours = {"speed": 1,
                                 "start_hue": 189,
@@ -107,7 +138,9 @@ class Puzzle:
     def step(self):
         if ticks_ms() - self.heartbeat_timer > self.heartbeat_timeout:
             network.send_mqtt_json(self.topic, {"heartbeat" : network.nic.ifconfig()[0]})
+            
             self.heartbeat_timer = ticks_ms()
+           
             
         if ticks_ms() - self.indicator_timer > self.indicator_timeout:
             self.indicator_led.toggle()
@@ -120,7 +153,20 @@ class Puzzle:
         self.update_crystal_leds()
         self.check_touchingSymbols()
         self.update_room_leds()
+        self.check_buttons()
         
+    def check_buttons(self):
+        status = self.buttons.check_buttons()
+        if status != self.buttons.last_status:
+            # check each button if it has changed from 1 to 0 send a pressed message
+            for b in range(0,4):
+                if status[b] != self.buttons.last_status[b] and status[b] == 0 :
+                    print(f"{b} - {status[b]}")
+                    self.puzzle_json_generator({"pressed":b})
+            self.buttons.last_status = status
+            
+    
+            
         
     def update_room_leds(self):
         if self.room_leds_mode == "rainbow":
@@ -162,7 +208,7 @@ class Puzzle:
             r,g,b = hsl_to_rgb(self.room_colours["current_hue"], 0.9, 0.7)
             
             
-            print((r,g,b))
+            
             for i in range(0,100):
                 self.room_leds[i] = [g,r,b]
                 

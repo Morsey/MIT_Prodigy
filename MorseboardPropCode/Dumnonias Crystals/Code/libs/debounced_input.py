@@ -54,8 +54,13 @@ class DebouncedInput:
     def __ButtonHandler(self, pin):
         
         #print("IRQ with flags:", pin.irq().flags())
-        self.db_timer.init(mode=Timer.ONE_SHOT, period=self.debounce_ms, callback=self.__ButtonDebounceTimerExpired)
-        
+        #self.db_timer.init(mode=Timer.ONE_SHOT, period=self.debounce_ms, callback=self.__ButtonDebounceTimerExpired)
+        try:
+            self.db_timer.init(mode=Timer.ONE_SHOT, period=self.debounce_ms, callback=self.__ButtonDebounceTimerExpired)
+        except Exception as e:
+            print(f"Failed to initialize debounce timer: {e}")
+            # Optionally re-enable the interrupt here
+            self.pin.irq(self.__ButtonHandler, Pin.IRQ_FALLING | Pin.IRQ_RISING)
         # Disable pin interrupt
         self.pin.irq(trigger=0)
         
