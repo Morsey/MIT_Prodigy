@@ -8,6 +8,9 @@
         },
         "GUItest": {
             "credentialSecret": false
+        },
+        "DevonlyGuidance": {
+            "credentialSecret": false
         }
     },
     "activeProject": "GUItest"
